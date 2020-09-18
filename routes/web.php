@@ -20,3 +20,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/customlogin/{role}', function(){
+	return view('auth.login')->with(['role'=> request()->role]);
+})->name('customlogin');
+
+
+//======================================================================
+//Parentref Routes
+//======================================================================
+
+Route::get('/parentregistration', function(){
+	return view('auth.parentregistration');
+})->name('parentregistration');
