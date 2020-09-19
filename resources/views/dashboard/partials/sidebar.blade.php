@@ -35,6 +35,39 @@
                     </span>
                 </a>
             </li>
+
+            <li class="">
+                <a href="javascript:void(0)">
+                    <i class="fa-fw fa fa-home"></i>
+                    <span class="nav-label">
+                        {{ 'Home' }}
+                    </span>
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="#">
+                    <i class="fa fa-book fa-fw"></i>
+                    <span class="nav-label">Repository</span><span class="fa arrow fa-fw"></span>
+                </a>
+
+                <ul class="nav nav-second-level collapse">
+                    <li class="">
+                        <a href="/">
+                            <i class="fa fa-th-list fa-fw"></i>
+                            <span class="nav-label custom-nav-label">Tasks</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/">
+                            <i class="fa fa-list fa-fw"></i>
+                            <span class="nav-label custom-nav-label">Sub Tasks</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 </nav>
