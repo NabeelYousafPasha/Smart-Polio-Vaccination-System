@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/customlogin/{role}', function(){
 	return view('auth.login')->with(['role'=> request()->role]);
@@ -42,7 +41,3 @@ Route::patch('/parent/{parentref}','ParentrefController@edit')->name('parent.upd
 
 Route::get('/listchildren','ChildrenController@index')->name('listchildren');
 
-=======
-Route::get('/', [HomeController::class, 'index'])->name('/');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
->>>>>>> 43bbc7cb3dfda509bf2bb255f7c6595dfb03ee52
