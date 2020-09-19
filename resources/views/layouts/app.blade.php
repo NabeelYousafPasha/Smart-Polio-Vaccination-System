@@ -45,7 +45,7 @@
                             {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li> --}}
-                            @if (Route::has('parentregistration'))
+                            @if ($role ?? Null)
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('parentregistration') }}">{{ __('Registeration') }}</a>
                                 </li>

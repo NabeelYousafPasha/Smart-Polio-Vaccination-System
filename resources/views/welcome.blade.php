@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SPVDS</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -61,10 +61,24 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+        
+        .bg {
+          /* The image used */
+          background-image: url("Polio-vaccine-750x500.jpg");
+        
+          /* Full height */
+          height: 100%; 
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="bg">
+            <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -86,9 +100,10 @@
 
                 <div class="links">
                     <a href="{{ route('customlogin',2) }}">Parent Module</a>
-                    <a href="{{ route('customlogin',3) }}">Worker Module</a>
+                    {{-- <a href="{{ route('customlogin',3) }}">Worker Module</a> --}}
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
