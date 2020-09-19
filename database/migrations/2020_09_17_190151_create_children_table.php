@@ -15,6 +15,9 @@ class CreateChildrenTable extends Migration
     {
         Schema::create('childrens', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->date('DOB');
+            $table->foreignId('parentref_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

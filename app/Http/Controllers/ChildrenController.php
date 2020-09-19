@@ -12,9 +12,14 @@ class ChildrenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /*
+    LIST ALL CHILDREN OF LOGIN USER
+    */
     public function index()
     {
-        //
+        $chidren = Children::where('parentref_id' , auth()->user()->id)->with('parentref')->get();
+
     }
 
     /**
@@ -24,7 +29,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        //
+        return view('child.create');
     }
 
     /**
@@ -35,7 +40,13 @@ class ChildrenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $child = Children::create([
+            'name' => $request->name,
+            'DOB'=> $request->DOB,
+            'parentref_id' => auth()->user()->id 
+            ]);
+            $child->save();
+            return redirect()->route('listchildren');
     }
 
     /**
@@ -46,7 +57,8 @@ class ChildrenController extends Controller
      */
     public function show(Children $children)
     {
-        //
+        return view('child.view')->with($children->with('parentref'));
+
     }
 
     /**
@@ -57,7 +69,8 @@ class ChildrenController extends Controller
      */
     public function edit(Children $children)
     {
-        //
+        return view('child.edit')->with($children);
+
     }
 
     /**
@@ -69,7 +82,10 @@ class ChildrenController extends Controller
      */
     public function update(Request $request, Children $children)
     {
-        //
+        $children->name = $request->name;
+        $children->DOB = $request->DOB;
+        $children->update();
+        return redirect()->route('listchildren');
     }
 
     /**
@@ -80,6 +96,7 @@ class ChildrenController extends Controller
      */
     public function destroy(Children $children)
     {
-        //
+        $children->delete();
+        return back();
     }
 }

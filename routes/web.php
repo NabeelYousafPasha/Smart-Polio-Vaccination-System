@@ -32,3 +32,15 @@ Route::get('/customlogin/{role}', function(){
 Route::get('/parentregistration', function(){
 	return view('auth.parentregistration');
 })->name('parentregistration');
+Route::get('/parent/{parentref}','ParentrefController@edit')->name('parent.edit');
+Route::patch('/parent/{parentref}','ParentrefController@edit')->name('parent.update');
+
+
+
+//======================================================================
+//Children Routes
+//======================================================================
+
+
+Route::get('/listchildren','ChildrenController@index')->name('listchildren');
+

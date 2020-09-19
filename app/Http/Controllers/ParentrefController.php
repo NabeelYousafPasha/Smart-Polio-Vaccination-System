@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Children;
 use App\Parentref;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,7 @@ class ParentrefController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -35,7 +37,7 @@ class ParentrefController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -57,7 +59,7 @@ class ParentrefController extends Controller
      */
     public function edit(Parentref $parentref)
     {
-        //
+        return view('parent.editparent')->with($parentref);
     }
 
     /**
@@ -69,7 +71,12 @@ class ParentrefController extends Controller
      */
     public function update(Request $request, Parentref $parentref)
     {
-        //
+        $parentref->name = $request->name;
+        $parentref->CNIC = $request->CNIC;
+        $parentref->address = $request->address;
+        $parentref->update();
+        return redirect()->route('listchildren');
+
     }
 
     /**
