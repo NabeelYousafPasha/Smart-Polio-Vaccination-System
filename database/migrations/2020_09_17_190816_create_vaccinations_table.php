@@ -15,6 +15,8 @@ class CreateVaccinationsTable extends Migration
     {
         Schema::create('vaccinations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('worker_id')->constrained();
+            $table->foreignId('children_id')->constrained();
             $table->timestamps();
         });
     }

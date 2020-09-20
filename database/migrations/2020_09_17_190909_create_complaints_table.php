@@ -15,6 +15,8 @@ class CreateComplaintsTable extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->id();
+            $table->unsignedSmallInteger('status');
+            $table->foreignId('worker_id')->constrained();
             $table->timestamps();
         });
     }

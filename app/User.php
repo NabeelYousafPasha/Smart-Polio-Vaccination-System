@@ -11,8 +11,8 @@ class User extends Authenticatable
     use Notifiable;
 
     public const ADMIN = 1;
-    public const WORKER = 2;
-    public const PARENT = 3;
+    public const WORKER = 3;
+    public const PARENT = 2;
 
     /**
      * The attributes that are mass assignable.
