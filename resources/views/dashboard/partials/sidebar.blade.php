@@ -10,7 +10,7 @@
                                 href="{{ route('/') }}"
                             >
                                 <strong class="font-bold">
-                                {{ config('app.name', 'Laravel') }}
+                                SPVS
                                 </strong>
                             </a>
                         </span>
@@ -18,7 +18,7 @@
                             <img
                                 alt="logo"
                                 class="img-responsive"
-                                src="https://avatars2.githubusercontent.com/u/46818315?s=460&u=99505012704e0fe099a4ae6a1bdaee5591eba1ac&v=4"
+                                src={{ asset('logo.JPG') }}
                             />
                     </span>
                 </div>
@@ -35,16 +35,16 @@
                     </span>
                 </a>
             </li>
-
+            @if(auth()->user()->role == 2)
             <li class="">
-                <a href="javascript:void(0)">
+                <a href="{{ route('listchildren') }}">
                     <i class="fa-fw fa fa-home"></i>
                     <span class="nav-label">
-                        {{ 'Home' }}
+                        {{ 'Children' }}
                     </span>
                 </a>
             </li>
-
+            @endif
 
             <li class="">
                 <a href="#">

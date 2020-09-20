@@ -18,13 +18,31 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<style>
+            .bg {
+          /* The image used */
+          background-image: url("Polio-vaccine-750x500.jpg");
+        
+          /* Full height */
+          height: 100%; 
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+</style>
 </head>
 <body>
+<div class="bg" >
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <h5>
+                        SMART POLIO VACCINATION SYSTEM
+                    </h5>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,12 +58,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
+                            </li> --}}
+                            @if ($role ?? Null)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('parentregistration') }}">{{ __('Registeration') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,5 +94,6 @@
             @yield('content')
         </main>
     </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,489 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+/*==========================================Common classes==================================================
+======================================================================================================
+=====================================================================================================*/
+.btn {
+   padding: 10px 12px;
+  }
+  
+.lightBlue {
+  background: linear-gradient( to right, #3599d4 0%, #3599d4 50%, #1791d0 50%, #1791d0 100%);
+  border-radius: 25px;
+  background-color: #2e4662;
+  color: white;
+}
+
+.darkBlue {
+  background: linear-gradient( to right, #2e4662 0%, #2e4662 50%, #273d56 50%, #273d56 100%);
+  border-radius: 25px;
+  background-color: #2e4662;
+  color: white;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.marginTop {
+  margin-top: 47px;
+}
+
+.hr {
+  border-top: 1px solid #55595b;
+}
+
+.bg {
+  background-color: #c2e0f2;
+  padding: 10px 15px 1px 15px;
+  border-radius: 6px;
+}
+
+.paddingvw {
+  padding: 5vw 0vw;
+}
+
+
+/*==========================================TOP BAR=====================================================
+========================================================================================================
+========================================================================================================*/
+#topBar{
+  background-color: #f5f5f5;
+}
+
+
+#topBar .btn-outlined.btn-primary {
+  background-color: #e3eaf0;
+  border: none;
+  color: #3599d4;
+  border-radius: initial !important;
+  padding: 10px 30px;
+}
+
+#topBar .btn-outlined.btn-primary:hover,
+#topBar .btn-outlined.btn-primary:active {
+  color: #FFF !important;
+  background: #394c56;
+  border-color: #394c56:
+}
+
+#topBar .form-signin {
+  padding: 20px 17px;
+  margin-right: 19px;
+}
+
+#topBar .dropdown-menu {
+  background-color: #f5f5f5;
+}
+
+
+/*====================================Common Classes==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.lineHeight30 {
+  line-height: 30px;
+}
+
+.lineHeight23 {
+  line-height: 23px;
+}
+
+.lineHeight25 {
+  line-height: 25px;
+}
+
+.line-height40 {
+  line-height: 40px;
+}
+
+.rightText {
+  text-align: right;
+}
+
+.paddingLeft {
+  padding-left: 0;
+}
+
+
+/*==========================================Spaces==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.space5 {
+  height: 5px;
+}
+
+.space10 {
+  height: 10px;
+}
+
+.space15 {
+  height: 15px;
+}
+
+.space20 {
+  height: 20px;
+}
+
+.space25 {
+  height: 25px;
+}
+
+.space30 {
+  height: 30px;
+}
+
+.space35 {
+  height: 35px;
+}
+
+.space40 {
+  height: 40px;
+}
+
+.space45 {
+  height: 45px;
+}
+
+.space50 {
+  height: 50px;
+}
+
+.space60 {
+  height: 60px;
+}
+
+.space70 {
+  height: 70px;
+}
+
+.space80 {
+  height: 80px;
+}
+
+.space100 {
+  height: 100px;
+}
+
+.space120 {
+  height: 120px;
+}
+
+.space150 {
+  height: 150px;
+}
+
+.space164 {
+  height: 164px;
+}
+
+.space200 {
+  height: 200px;
+}
+
+.space240 {
+  height: 240px;
+}
+
+.space250 {
+  height: 250px;
+}
+
+
+/*==========================================fonts==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.font10 {
+  font-size: 10px;
+}
+
+.font11 {
+  font-size: 11px;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font13 {
+  font-size: 13px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.font29 {
+  font-size: 29px;
+}
+
+.font30 {
+  font-size: 30px;
+}
+
+.font36 {
+  font-size: 36px;
+}
+
+.font40 {
+  font-size: 40px;
+}
+
+.font48 {
+  font-size: 48px;
+}
+
+.font50 {
+  font-size: 50px;
+}
+
+.font72 {
+  font-size: 72px;
+}
+
+
+/*==========================================font weight==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.fontWeight100 {
+  font-weight: 100;
+}
+
+.dropdown-menu>li>a {
+  color: white;
+}
+
+
+/*==========================================HR========================================================
+======================================================================================================
+=====================================================================================================*/
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+/*==========================================color==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.whiteColor {
+  color: white;
+}
+
+.blackColor {
+  color: black;
+}
+
+.themeColor {
+  color: #3599d4;
+}
+
+.footerColor {
+  color: #e0e2e2
+}
+
+.footerColor2 {
+  color: #969da7;
+}
+
+.grey {
+  color: #88949a;
+}
+
+
+/*==========================================navbar==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  border-color: transparent;
+  padding-bottom: 10px;
+  transition: .4s ease;
+}
+
+.navbar-nav>.active>a {
+  background-color: transparent;
+  color: #44a26d;
+}
+
+#navbar .navbar-nav>li>a:hover {
+  color: #3599d4;
+  background-color: transparent;
+}
+
+#navbar .navbar-nav>li>a:focus {
+  color: #44a26d;
+  background-color: transparent;
+}
+
+.btn-default:hover {
+  color: #fff;
+}
+
+.btn-default:focus {
+  color: #fff;
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-toggle {
+  background-color: white;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+#navbar .nav>li>a {
+  padding: 30px 17px;
+}
+
+#navbar .nav>li>button {
+  margin-top: 20px;
+  padding: 10px 17px;
+}
+
+#navbar .collapse button {
+  margin-top: 20px;
+}
+
+
+/*==========================================Button==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.btn-footer {
+  padding: 6px 28px;
+  font-size: 12.8px;
+  background-color: #3599d4;
+  border-radius: 36px;
+  color: white;
+}
+
+.btn-footer:hover {
+  color: #fff;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*==========================================rectangle==================================================
+======================================================================================================
+=====================================================================================================*/
+
+.rectangle {
+  border: 1px solid #d6d6d6;
+}
+
+.rectangle:after {
+  position: absolute;
+    top: 27%;
+    left: 15px;
+    transform: translateY(0%);
+    content: '';
+    background: #fff;
+    width: 1px;
+    height: 50px;
+}
+
+.rectangle:before {
+      right: 15px;
+    position: absolute;
+    top: 27%;
+    transform: translateY(0%);
+    content: '';
+    background: #fff;
+    width: 1px;
+    height: 50px;
+}
+
+.rectangle:hover {
+  border: 1px solid #3599d4;
+}
+
+.rectangle:after:hover {
+  position: absolute;
+  top: 27%;
+  left: 25.7%;
+  transform: translateY(0%);
+  content: '';
+  background: #3599d4;
+  width: 1px;
+  height: 50px;
+}
+
+.rectangle:before:hover {
+  right: 25.6%;
+  position: absolute;
+  top: 27%;
+  transform: translateY(0%);
+  content: '';
+  background: #3599d4;
+  width: 1px;
+  height: 50px;
+}
+
+
+/*==========================================footer==================================================
+======================================================================================================
+=====================================================================================================*/
+
+#footer .footer1 {
+  background-color: #2e4662;
+}
+
+#footer .footer-bottom {
+  background-color: #273d56;
+}
+
+#footer .footer-top {
+  background-color: #273d56;
+  padding: 25px;
+}
+
+#footer ul li {
+  line-height: 45px;
+}
+
+#footer .vl {
+  border-left: 1px solid #969da7;
+  height: 205px;
+}
