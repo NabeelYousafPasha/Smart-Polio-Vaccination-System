@@ -35,7 +35,7 @@
                     </span>
                 </a>
             </li>
-            @if(auth()->user()->role == 2)
+            @if(auth()->user()->role == \App\User::PARENT)
             <li class="">
                 <a href="{{ route('listchildren') }}">
                     <i class="fa-fw fa fa-home"></i>
