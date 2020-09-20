@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Parentref extends Model
 {
     protected $fillable = [
-        'name', 'CNIC', 'address',
+         'address' , 'user_id',
     ];
+
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
 }
+
+

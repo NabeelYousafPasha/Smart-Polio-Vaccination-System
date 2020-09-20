@@ -18,8 +18,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<style>
+            .bg {
+          /* The image used */
+          background-image: url("Polio-vaccine-750x500.jpg");
+        
+          /* Full height */
+          height: 100%; 
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+</style>
 </head>
 <body>
+<div class="bg" >
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -78,5 +94,6 @@
             @yield('content')
         </main>
     </div>
+</div>
 </body>
 </html>

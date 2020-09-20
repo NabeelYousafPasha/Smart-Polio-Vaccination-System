@@ -7,7 +7,7 @@
         <ul class="nav navbar-top-links navbar-right">
             <li>
                 <span class="m-r-sm text-muted welcome-message">
-                    {{ config('app.name', 'Laravel') }}
+                   SPVS
                 </span>
             </li>
             @guest
@@ -22,8 +22,8 @@
                     <ul class="dropdown-menu dropdown-messages" aria-labelledby="navbarDropdown">
                         <li>
                             <div class="dropdown-messages-box">
-                                <a class="dropdown-item" href="{{ route('users.password.create') }}">
-                                    <i class="fa fa-key fa-fw"></i> Change Password
+                                <a class="dropdown-item" href="{{route('editprofile',auth()->user()->id)}}">
+                                    <i class="fa fa-key fa-fw"></i> Edit Profile
                                 </a>
                             </div>
                         </li>

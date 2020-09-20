@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Children;
 use App\Http\Controllers\Controller;
+use App\Parentref;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,11 +66,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+         $user = User::create([
             'name' => $data['name'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
         ]);
+        if($data['role'] == 2){
+            $parent  = Parentref::create([
+                   'address' => $data['address'],
+                   'user_id' => $user->id,
+               ]);
+           }
+        return $user;
     }
 }

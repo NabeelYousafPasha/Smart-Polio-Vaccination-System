@@ -59,7 +59,8 @@ class ParentrefController extends Controller
      */
     public function edit(Parentref $parentref)
     {
-        return view('parent.editparent')->with($parentref);
+        //
+
     }
 
     /**
@@ -71,11 +72,11 @@ class ParentrefController extends Controller
      */
     public function update(Request $request, Parentref $parentref)
     {
-        $parentref->name = $request->name;
-        $parentref->CNIC = $request->CNIC;
-        $parentref->address = $request->address;
-        $parentref->update();
-        return redirect()->route('listchildren');
+        // $parentref->name = $request->name;
+        // $parentref->CNIC = $request->CNIC;
+        // $parentref->address = $request->address;
+        // $parentref->update();
+        // return redirect()->route('listchildren');
 
     }
 

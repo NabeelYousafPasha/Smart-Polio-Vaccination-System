@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Children;
+use App\Parentref;
 use Illuminate\Http\Request;
 
 class ChildrenController extends Controller
@@ -18,7 +19,8 @@ class ChildrenController extends Controller
     */
     public function index()
     {
-        $chidren = Children::where('parentref_id' , auth()->user()->id)->with('parentref')->get();
+        $children = Children::get();
+        return view('dashboard.pages.children.listchild')->with(['children' => $children]);
 
     }
 
@@ -29,7 +31,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        return view('child.create');
+        return view('dashboard.pages.children.createchild');
     }
 
     /**
@@ -40,12 +42,12 @@ class ChildrenController extends Controller
      */
     public function store(Request $request)
     {
+        $parentref = Parentref::where('user_id',auth()->user()->id)->first();
         $child = Children::create([
             'name' => $request->name,
             'DOB'=> $request->DOB,
-            'parentref_id' => auth()->user()->id 
+            'parentref_id' => $parentref->id 
             ]);
-            $child->save();
             return redirect()->route('listchildren');
     }
 
@@ -57,7 +59,7 @@ class ChildrenController extends Controller
      */
     public function show(Children $children)
     {
-        return view('child.view')->with($children->with('parentref'));
+        return view('dashboard.pages.children.viewchild')->with(['children' => $children->with('parentref','parentref.user')->first()]);
 
     }
 
@@ -69,7 +71,7 @@ class ChildrenController extends Controller
      */
     public function edit(Children $children)
     {
-        return view('child.edit')->with($children);
+        return view('dashboard.pages.children.editchild')->with(['children' => $children->with('parentref')->first()]);
 
     }
 

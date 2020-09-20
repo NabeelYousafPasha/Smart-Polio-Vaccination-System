@@ -15,9 +15,8 @@ class CreateParentrefsTable extends Migration
     {
         Schema::create('parentrefs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('CNIC');
             $table->longText('address');
+            $table->foreignId('user_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
